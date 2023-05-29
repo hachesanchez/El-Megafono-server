@@ -1,6 +1,8 @@
 const router = require("express").Router();
 
 const User = require('../models/User.model')
+const Experience = require('../models/Experience.model')
+const Job = require('../models/Job.model')
 
 router.get("/", (req, res, next) => {
     res.json("User Routes");
@@ -11,23 +13,59 @@ router.get("/getAllUsers", (req, res, next) => {
 
     User
         .find()
-        .select({ title: 1, imageUrl: 1 })
-        .sort({ title: 1 })
+        .select({ username: 1, avatar: 1, role: 1, location: 1 })
+        .sort({ username: 1 })
         .then(response => setTimeout(() => res.json(response), 1000))
         .catch(err => next(err))
 });
 
 
-router.get("/:id"), (req, res, next) => {
+router.get("/getOneUser/:id", (req, res, next) => {
 
-    const { user_id } = req.params
+    const { id } = req.params
 
     User
-        .findById(user_id)
+        .findById(id)
+        .populate({
+            path: 'experience',
+            select: 'title'
+        })
+        .populate({
+            path: 'savedJob',
+            select: 'title'
+        })
+        .populate({
+            path: 'favoriteProfessionals',
+            select: 'username'
+        })
         .then(response => res.json(response))
         .catch(err => next(err))
-}
+});
 
+
+router.put("/edit/:id", (req, res, next) => {
+
+    const { email, username, role, avatar, description, location, jobCategory, yearsOfExperience, availability, travelAvailability, languages, skills, dailyRate, grossSalary, experience, savedJob, favoriteProfessionals } = req.body
+    const { id } = req.params
+
+    console.log('----', req.body)
+    User
+        .findByIdAndUpdate(id, { email, username, role, avatar, description, location, jobCategory, yearsOfExperience, availability, travelAvailability, languages, skills, dailyRate, grossSalary, experience, savedJob, favoriteProfessionals }, { new: true })
+        .then(response => res.json(response))
+        .catch(err => next(err))
+});
+
+
+router.delete("/delete/:id", (req, res, next) => {
+
+    const { id } = req.params
+
+    User
+        .findByIdAndDelete(id)
+        .then(response => res.json(response))
+        .catch(err => next(err))
+});
 
 
 module.exports = router;
+

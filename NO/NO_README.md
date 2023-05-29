@@ -21,8 +21,8 @@ Base URL `/api/users`
 | GET | `/getOneUser/:id` | Get matching ID user details|
 | GET | `/favourites/:id` | Get list of users made favourite by a user| 
 | POST | `/favourites/:id` | Add users to a list of favourites|
-| PUT | `/edit/:id` | Matching ID user edition |
-| DELETE | `/delete/:id` | Matching ID user deletion |
+| PUT | `/:id/edit` | Matching ID user edition |
+| DELETE | `/:id/delete` | Matching ID user deletion |
 | DELETE | `/favourites/:id` | Matching ID deletion from favourites |
 
 
@@ -31,11 +31,11 @@ Base URL `/api/experience`
 
 | HTTM Method   |  URI path     |  Description  |  
 | ------------- | ------------- | ------------- |  
-| GET | `/getAllExperiences` | Get all experiences list from matching ID |
+| GET | `/:id/getAllExperiences` | Get all experiences list from matching ID |
 | GET | `/getOneExperience/:id` | Get matching ID experience details| 
 | POST | `/saveExperience` | Create new experience  |
-| PUT | `/edit/:id` | Matching ID experience edition |
-| DELETE | `/delete/:id` | Matching ID experience deletion |
+| PUT | `/:id/edit` | Matching ID experience edition |
+| DELETE | `/:id/delete` | Matching ID experience deletion |
 
 
 **Jobs Routes**
@@ -50,8 +50,20 @@ Base URL `/api/jobs`
 | GET | `/saved/:id` | Get list of jobs saved on a user's profile|
 | POST | `/saveJob` | Create new job offer |
 | POST | `/saved/:id` | Save a maching ID job offer to a user's profile|
-| PUT | `/edit/:id` | Matching ID job edition |
-| DELETE | `/delete/:id` | Matching ID job deletion |
+| PUT | `/:id/edit` | Matching ID job edition |
+| DELETE | `/:id/delete` | Matching ID job deletion |
 | DELETE | `/saved/:id` | Matching ID job deletion from saved|
 
- 
+
+**Job Application Routes**
+Base URL: `/api/job-applications`
+
+| HTTM Method   |  URI path     |  Description  |  
+| ------------- | ------------- | ------------- |  
+| GET | `/getAllJobApplications` | Get all job applications |
+| GET | `/:id` | Matching ID job application|
+| POST | `/apply/:id` | Apply to an ID job offer|
+| DELETE | `/delete/:id` | Matching ID job deletion from saved|
+
+
+ # El-Megafono-server

@@ -1,6 +1,23 @@
 const { Schema, model } = require("mongoose");
 
-const jobOfferSchema = new Schema(
+const jobCategoryOptions = [
+    'Administración y finanzas',
+    'Atención directa',
+    'Comunicación y Marketing',
+    'Cooperación',
+    'Dirección y coordinación',
+    'Gestión de proyectos',
+    'Legal',
+    'Diseño',
+    'Arquitectura',
+    'Ciencias de la salud',
+    'Recursos humanos',
+    'Imagen y sonido',
+    'Tecnologías de la información (IT)',
+    'Traducción e interpretación'
+];
+
+const jobSchema = new Schema(
     {
         title: {
             type: String,
@@ -12,10 +29,7 @@ const jobOfferSchema = new Schema(
         },
         jobCategory: {
             type: String,
-            enum: ['Administración y finanzas', 'Atención directa', 'Comunicación y Marketing', 'Cooperación',
-                'Dirección y coordinación', 'Gestión de proyectos', 'Legal', 'Diseño', 'Arquitectura', 'Ciencias de la salud', 'Recursos humanos',
-                'Imagen y sonido', 'Tecnologías de la información (IT)', 'Traducción e interpretación'],
-            required: [true, 'La categoría laboral es obligatoria.']
+            enum: jobCategoryOptions,
         },
         yearsOfExperience: {
             type: Number,
@@ -43,8 +57,8 @@ const jobOfferSchema = new Schema(
             type: Boolean,
             default: false,
         },
-        laguages: [{
-            language: {
+        languages: [{
+            name: {
                 type: String,
                 required: [true, 'El idioma es obligatorio.']
             },
@@ -68,6 +82,6 @@ const jobOfferSchema = new Schema(
     }
 );
 
-const JobOffer = model("JobOffer", jobOfferSchema);
+const Job = model("Job", jobSchema);
 
-module.exports = JobOffer;
+module.exports = Job;

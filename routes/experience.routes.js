@@ -15,7 +15,10 @@ router.get("/getAllExperiences", (req, res, next) => {
 
     Experience
         .find()
-        .populate("owner")
+        .populate({
+            path: 'owner',
+            select: 'username'
+        })
         .select({ title: 1, owner: 1, organization: 1, description: 1, startDate: 1, endDate: 1 })
         .sort({ startDate: 1 })
         .then(response => setTimeout(() => res.json(response), 1000))
@@ -29,7 +32,10 @@ router.get("/getOneExperience/:id", (req, res, next) => {
 
     Experience
         .findById(id)
-        .populate("owner")
+        .populate({
+            path: 'owner',
+            select: 'username'
+        })
         .then(response => res.json(response))
         .catch(err => next(err))
 });
@@ -44,6 +50,7 @@ router.post("/saveExperience", (req, res, next) => {
         .then(response => res.json(response))
         .catch(err => next(err))
 });
+
 
 router.put("/edit/:id", (req, res, next) => {
 

@@ -57,6 +57,15 @@ const jobSchema = new Schema(
             type: Boolean,
             default: false,
         },
+        startDate: {
+            type: Date,
+            required: [true, 'La fecha de inicio es obligatoria.']
+        },
+        contract: {
+            type: String,
+            enum: ['Indefinido', 'Por obra y servicio', 'Autónoma/o'],
+            required: [true, 'El tipo de contrato es obligatorio.']
+        },
         languages: [{
             name: {
                 type: String,

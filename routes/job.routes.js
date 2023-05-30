@@ -10,7 +10,6 @@ router.get("/", (req, res, next) => {
 });
 
 
-
 router.get("/getAllJobs", (req, res, next) => {
 
     Job
@@ -28,7 +27,6 @@ router.get("/getAllJobs", (req, res, next) => {
         .then(response => setTimeout(() => res.json(response), 1000))
         .catch(err => next(err))
 });
-
 
 
 router.get("/getOneJob/:id", (req, res, next) => {
@@ -50,7 +48,6 @@ router.get("/getOneJob/:id", (req, res, next) => {
 });
 
 
-
 router.post("/saveJob", (req, res, next) => {
 
     const { title, description, jobCategory, yearsOfExperience, grossSalary, location, travelAvailability, remoteJob, isFilled, laguages, owner, applicants } = req.body
@@ -60,7 +57,6 @@ router.post("/saveJob", (req, res, next) => {
         .then(response => res.json(response))
         .catch(err => next(err))
 });
-
 
 
 router.put("/edit/:id", (req, res, next) => {
@@ -83,7 +79,6 @@ router.put("/edit/:id", (req, res, next) => {
 });
 
 
-
 router.delete("/delete/:id", (req, res, next) => {
 
     const { id } = req.params
@@ -93,6 +88,7 @@ router.delete("/delete/:id", (req, res, next) => {
         .then(response => res.json(response))
         .catch(err => next(err))
 });
+
 
 module.exports = router
 

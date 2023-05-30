@@ -46,8 +46,6 @@ router.post('/signup', (req, res, next) => {
 
 router.post('/login', (req, res, next) => {
 
-    console.log('secreto', process.env.TOKEN_SECRET)
-
     const { email, password } = req.body;
 
     if (email === '' || password === '') {

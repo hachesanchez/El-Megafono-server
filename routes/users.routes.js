@@ -48,7 +48,6 @@ router.put("/edit/:id", (req, res, next) => {
     const { email, username, role, avatar, description, location, jobCategory, yearsOfExperience, availability, travelAvailability, languages, skills, dailyRate, grossSalary, experience, savedJob, favoriteProfessionals } = req.body
     const { id } = req.params
 
-    console.log('----', req.body)
     User
         .findByIdAndUpdate(id, { email, username, role, avatar, description, location, jobCategory, yearsOfExperience, availability, travelAvailability, languages, skills, dailyRate, grossSalary, experience, savedJob, favoriteProfessionals }, { new: true })
         .then(response => res.json(response))

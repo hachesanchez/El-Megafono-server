@@ -1,7 +1,12 @@
+TO DO:
+
+- Proteger rutas
+- Saber quién es el owner de la sesión
+
+
+
 # El-Megafono-server
 
-
- 
 **Auth Routes**
 Base URL `/auth`
 

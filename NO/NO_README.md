@@ -2,6 +2,14 @@ TO DO:
 
 - Proteger rutas
 - Saber quién es el owner de la sesión
+- Prerrellenar campos en formulario de editar perfil
+- Que no se borren datos al editar perfil
+
+- Al iniciar sesión redirige a la segunda
+- Sacar más de un idioma al editar perfil
+- Skills al editar perfil?
+- Servicios: de dónde viene data¿
+- Editar perfil: renderizar un formulario u otro según el ROL
 
 
 

@@ -10,9 +10,9 @@ TO DO:
 - TODO: SUPEDITAR LA SALIDA DE LA BARRA A LA EXISTENCIA DE USER
 - TODO: Encapsular UseEffects
 - Experiences se crean sin owner
+- Borrar experiencia, que desaparezca del perfil
 
 - Cloudinary
-- Borrar experiencia, que desaparezca del perfil
 - Gestion de errores
 - Editar perfil: renderizar un formulario u otro según el ROL
 - Al iniciar sesión redirige a la segunda

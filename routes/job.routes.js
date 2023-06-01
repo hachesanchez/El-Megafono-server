@@ -6,12 +6,6 @@ const Job = require('../models/Job.model')
 
 const { isAuthenticated } = require("../middlewares/verifyToken.middleware")
 
-
-router.get("/", (req, res, next) => {
-    res.json("Jobs Routes");
-});
-
-
 router.get("/getAllJobs", (req, res, next) => {
 
     Job
@@ -26,7 +20,7 @@ router.get("/getAllJobs", (req, res, next) => {
         })
         .select({ title: 1, imageUrl: 1, owner: 1, applicants: 1 })
         .sort({ title: 1 })
-        .then(response => setTimeout(() => res.json(response), 1000))
+        .then(response => res.json(response))
         .catch(err => next(err))
 });
 
@@ -65,12 +59,12 @@ router.post("/saveJob", isAuthenticated, (req, res, next) => {
 router.put("/edit/:id", isAuthenticated, (req, res, next) => {
 
     const { title, description, jobCategory, yearsOfExperience, grossSalary, location, travelAvailability, remoteJob, isFilled, laguages, applicants } = req.body
-    const { id } = req.params
+    const { id: user_id } = req.params
     const { _id: owner } = req.payload
 
 
     Job
-        .findByIdAndUpdate(id, { title, description, jobCategory, yearsOfExperience, grossSalary, location, travelAvailability, remoteJob, isFilled, laguages, owner, applicants }, { new: true })
+        .findByIdAndUpdate(user_id, { title, description, jobCategory, yearsOfExperience, grossSalary, location, travelAvailability, remoteJob, isFilled, laguages, owner, applicants }, { new: true })
         .populate({
             path: 'owner',
             select: 'username'

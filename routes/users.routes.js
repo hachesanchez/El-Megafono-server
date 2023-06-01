@@ -4,11 +4,6 @@ const User = require('../models/User.model')
 const Experience = require('../models/Experience.model')
 const Job = require('../models/Job.model')
 
-router.get("/", (req, res, next) => {
-    res.json("User Routes");
-});
-
-
 router.get("/getAllUsers", (req, res, next) => {
 
     User
@@ -61,7 +56,9 @@ router.delete("/delete/:id", (req, res, next) => {
 
     User
         .findByIdAndDelete(id)
-        .then(response => res.json(response))
+        // TODO: REVISAR ENDPOINTS RESOLUBLES CON SENDSTATUS
+        // TODO: DESACOPLAR CONTROLADORES
+        .then(() => res.sendStatus(204))
         .catch(err => next(err))
 });
 

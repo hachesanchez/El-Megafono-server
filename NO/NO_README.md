@@ -5,12 +5,32 @@ TO DO:
 - Prerrellenar campos en formulario de editar perfil
 - Que no se borren datos al editar perfil
 - Servicios: de dónde viene data¿
+- Skills al editar perfil?
+- Edición de profile: no cambia sin recargar página
+- TODO: SUPEDITAR LA SALIDA DE LA BARRA A LA EXISTENCIA DE USER
+
 
 - Al iniciar sesión redirige a la segunda
+- Experiences se crean sin owner
+- Cloudinary
+- Gestion de errores
 - Sacar más de un idioma al editar perfil
-- Skills al editar perfil?
 - Editar perfil: renderizar un formulario u otro según el ROL
 - Perfil no salen los datos. en Auth routes server > payload
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -81,3 +101,21 @@ Base URL: `/api/job-applications`
 
 
  # El-Megafono-server
+
+
+
+
+
+   <h5><Link className="" to={`/profesionales/${user?._id}`}>
+                        <Badge bg="secondary">Ver mi perfil público</Badge>{' '}
+                    </Link></h5>
+                    <h5> <Link className=" " to={`/edit/${user?._id}`}>
+                        <Badge bg="secondary">Completar mi perfil</Badge>{' '}
+                    </Link></h5>
+                    <Badge as={Link} to="" onClick={handleDeleteUser} bg="danger">Borrar mi perfil  </Badge>{' '}
+                    {/*  <Link className="" to={`/edit/${user?._id}`}>
+                        <Badge bg="danger">Borrar cuenta</Badge>
+                    </Link> */}
+                    <Button className="m-2" variant="danger" size="sm" onClick={handleDeleteUser}>
+                        Borrar mi perfil
+                    </Button>

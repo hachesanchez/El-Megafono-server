@@ -93,11 +93,3 @@ router.get('/verify', isAuthenticated, (req, res, next) => {
 })
 
 module.exports = router
-
-
-module.exports = router
-
-
-
-
-// jobCategory, yearsOfExperience, availability, travelAvailability, languages, skills, dailyRate, grossSalary

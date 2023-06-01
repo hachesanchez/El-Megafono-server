@@ -5,12 +5,6 @@ const Experience = require('../models/Experience.model')
 const Job = require('../models/Job.model')
 
 
-
-router.get("/", (req, res, next) => {
-    res.json("Experience Routes");
-});
-
-
 router.get("/getAllExperiences", (req, res, next) => {
 
     Experience
@@ -21,7 +15,7 @@ router.get("/getAllExperiences", (req, res, next) => {
         })
         .select({ title: 1, owner: 1, organization: 1, description: 1, startDate: 1, endDate: 1 })
         .sort({ startDate: 1 })
-        .then(response => setTimeout(() => res.json(response), 1000))
+        .then(response => res.json(response))
         .catch(err => next(err))
 });
 

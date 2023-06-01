@@ -1,36 +1,7 @@
-/* const router = require("express").Router()
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
-const { isAuthenticated } = require("../middlewares/verifyToken.middleware")
-const saltRounds = 10
+/* const User = require('./../models/User.model')
+ 
 
-const {
-    signup,
-    login,
-    verify
-} = require('./../controllers/auth.controllers')
-
-
-router.post('/signup', signup)
-router.post('/login', login)
-router.get('/verify', isAuthenticated, verify)
-
-
-module.exports = router
-
-  */
-
-
-
-const router = require("express").Router()
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
-
-const User = require('./../models/User.model')
-const { isAuthenticated } = require("../middlewares/verifyToken.middleware")
-const saltRounds = 10
-
-router.post('/signup', (req, res, next) => {
+const signup = (req, res, next) => {
 
     const { email, password, username, role, avatar, description, location } = req.body
 
@@ -63,12 +34,11 @@ router.post('/signup', (req, res, next) => {
         .catch(err => {
             next(err)
         })
-})
+
+}
 
 
-
-
-router.post('/login', (req, res, next) => {
+const login = (req, res, next) => {
 
     const { email, password } = req.body;
 
@@ -106,14 +76,21 @@ router.post('/login', (req, res, next) => {
 
         })
         .catch(err => next(err));
-})
+
+}
 
 
-router.get('/verify', isAuthenticated, (req, res, next) => {
+const verify = (req, res, next) => {
 
     console.log('EL USUARIO TIENE UN TOKEN CORRECTO Y SUS DATOS SON', req.payload)
-
     res.status(200).json(req.payload)
-})
 
-module.exports = router
+}
+
+
+module.exports = {
+    signup,
+    login,
+    verify
+}
+ */

@@ -1,37 +1,7 @@
-const router = require("express").Router()
-
-const { isAuthenticated } = require("../middlewares/verifyToken.middleware")
-
-const {
-    getAllJobs,
-    getOneJob,
-    saveJob,
-    editJob,
-    deleteJob
-} = require('./../controllers/job.controllers')
+const Job = require('./../models/Job.model')
 
 
-router.get("/getAllJobs", getAllJobs)
-router.get("/getOneJob/:id", getOneJob)
-router.post("/saveJob", isAuthenticated, saveJob)
-router.put("/edit/:id", isAuthenticated, editJob)
-router.delete("/delete/:id", deleteJob)
-
-module.exports = router
-
-
-
-
-
-/* const router = require("express").Router()
-
-const User = require('../models/User.model')
-const Experience = require('../models/Experience.model')
-const Job = require('../models/Job.model')
-
-const { isAuthenticated } = require("../middlewares/verifyToken.middleware")
-
-router.get("/getAllJobs", (req, res, next) => {
+const getAllJobs = (req, res, next) => {
 
     Job
         .find()
@@ -47,10 +17,11 @@ router.get("/getAllJobs", (req, res, next) => {
         .sort({ title: 1 })
         .then(response => res.json(response))
         .catch(err => next(err))
-});
+
+}
 
 
-router.get("/getOneJob/:id", (req, res, next) => {
+const getOneJob = (req, res, next) => {
 
     const { id } = req.params
 
@@ -66,10 +37,11 @@ router.get("/getOneJob/:id", (req, res, next) => {
         })
         .then(response => res.json(response))
         .catch(err => next(err))
-});
+
+}
 
 
-router.post("/saveJob", isAuthenticated, (req, res, next) => {
+const saveJob = (req, res, next) => {
 
     const { title, description, jobCategory, yearsOfExperience, grossSalary, location, travelAvailability, remoteJob, isFilled, laguages, applicants, startDate, contract } = req.body
     const { _id: owner } = req.payload
@@ -78,10 +50,11 @@ router.post("/saveJob", isAuthenticated, (req, res, next) => {
         .create({ title, description, jobCategory, yearsOfExperience, grossSalary, location, travelAvailability, remoteJob, isFilled, laguages, owner, applicants, startDate, contract })
         .then(response => res.json(response))
         .catch(err => next(err))
-});
+
+}
 
 
-router.put("/edit/:id", isAuthenticated, (req, res, next) => {
+const editJob = (req, res, next) => {
 
     const { title, description, jobCategory, yearsOfExperience, grossSalary, location, travelAvailability, remoteJob, isFilled, laguages, applicants } = req.body
     const { id: user_id } = req.params
@@ -100,10 +73,11 @@ router.put("/edit/:id", isAuthenticated, (req, res, next) => {
         })
         .then(response => res.json(response))
         .catch(err => next(err))
-});
+
+}
 
 
-router.delete("/delete/:id", (req, res, next) => {
+const deleteJob = (req, res, next) => {
 
     const { id } = req.params
 
@@ -111,10 +85,19 @@ router.delete("/delete/:id", (req, res, next) => {
         .findByIdAndDelete(id)
         .then(response => res.json(response))
         .catch(err => next(err))
-});
+
+}
 
 
-module.exports = router */
+
+module.exports = {
+    getAllJobs,
+    getOneJob,
+    saveJob,
+    editJob,
+    deleteJob
+}
+
 
 
 

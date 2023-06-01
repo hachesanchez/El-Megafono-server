@@ -10,16 +10,24 @@ TO DO:
 - TODO: SUPEDITAR LA SALIDA DE LA BARRA A LA EXISTENCIA DE USER
 - TODO: Encapsular UseEffects
 - Experiences se crean sin owner
-- Borrar experiencia, que desaparezca del perfil
+- Borrar experiencia, que desaparezca del perfil sin recarga
+-  Desacoplar ontroladores
 
+- Controladores auth no funcionan
 - Cloudinary
 - Gestion de errores
+- CRUD Jobs
+- Muchos errores en dropdown de navbar
+- Navbar por roles
+- La edición de experiencia no está protegida
 - Editar perfil: renderizar un formulario u otro según el ROL
 - Al iniciar sesión redirige a la segunda
-- CRUD Jobs
 - / Contacta
 - / Inicio
 - / Empleos 
+- Hacer FAVORITOS profesionañes
+- Guardar oferta
+- Aplicar a oferta
 - Buscador de profesionales
 - / Que sólo aparezcan empleos de tu categoría
 

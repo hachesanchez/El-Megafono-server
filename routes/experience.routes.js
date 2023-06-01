@@ -3,6 +3,7 @@ const router = require("express").Router()
 const User = require('../models/User.model')
 const Experience = require('../models/Experience.model')
 const Job = require('../models/Job.model')
+const { isAuthenticated } = require('../middlewares/verifyToken.middleware')
 
 
 router.get("/getAllExperiences", (req, res, next) => {
@@ -35,9 +36,10 @@ router.get("/getOneExperience/:id", (req, res, next) => {
 });
 
 
-router.post("/saveExperience", (req, res, next) => {
+router.post("/saveExperience", isAuthenticated, (req, res, next) => {
 
-    const { owner, title, organization, startDate, endDate, description } = req.body
+    const { title, organization, startDate, endDate, description } = req.body
+    const { _id: owner } = req.payload
 
     Experience
         .create({ owner, title, organization, startDate, endDate, description })
@@ -46,13 +48,14 @@ router.post("/saveExperience", (req, res, next) => {
 });
 
 
-router.put("/edit/:id", (req, res, next) => {
+router.put("/edit/:id", isAuthenticated, (req, res, next) => {
 
     const { title, organization, startDate, endDate, description } = req.body
     const { id } = req.params
+    const { _id: owner } = req.payload
 
     Experience
-        .findByIdAndUpdate(id, { title, organization, startDate, endDate, description }, { new: true })
+        .findByIdAndUpdate(id, { owner, title, organization, startDate, endDate, description }, { new: true })
         .then(response => res.json(response))
         .catch(err => next(err))
 });

@@ -8,15 +8,24 @@ TO DO:
 - Skills al editar perfil?
 - Edición de profile: no cambia sin recargar página
 - TODO: SUPEDITAR LA SALIDA DE LA BARRA A LA EXISTENCIA DE USER
-
-
-- Al iniciar sesión redirige a la segunda
+- TODO: Encapsular UseEffects
 - Experiences se crean sin owner
+
 - Cloudinary
+- Borrar experiencia, que desaparezca del perfil
 - Gestion de errores
-- Sacar más de un idioma al editar perfil
 - Editar perfil: renderizar un formulario u otro según el ROL
-- Perfil no salen los datos. en Auth routes server > payload
+- Al iniciar sesión redirige a la segunda
+- CRUD Jobs
+- / Contacta
+- / Inicio
+- / Empleos 
+- Buscador de profesionales
+- / Que sólo aparezcan empleos de tu categoría
+
+- Ordenar por fecha la experience list
+- Arreglar formato fecha en el defaultvalue
+- Sacar más de un idioma al editar perfil
 
 
 

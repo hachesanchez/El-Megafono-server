@@ -10,11 +10,12 @@ TO DO:
 - TODO: SUPEDITAR LA SALIDA DE LA BARRA A LA EXISTENCIA DE USER
 - TODO: Encapsular UseEffects
 - Experiences se crean sin owner
-- Borrar experiencia, que desaparezca del perfil sin recarga
 -  Desacoplar ontroladores
-
 - Controladores auth no funcionan
 - Cloudinary
+
+
+- Borrar experiencia, que desaparezca del perfil sin recarga: LOAD EXPERIENCE
 - Gestion de errores
 - CRUD Jobs
 - Muchos errores en dropdown de navbar
@@ -30,6 +31,7 @@ TO DO:
 - Aplicar a oferta
 - Buscador de profesionales
 - / Que sólo aparezcan empleos de tu categoría
+- Formularios en modales
 
 - Ordenar por fecha la experience list
 - Arreglar formato fecha en el defaultvalue

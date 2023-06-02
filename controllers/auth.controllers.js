@@ -1,5 +1,8 @@
-/* const User = require('./../models/User.model')
- 
+const User = require('./../models/User.model')
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
+const saltRounds = 10
+
 
 const signup = (req, res, next) => {
 
@@ -93,4 +96,4 @@ module.exports = {
     login,
     verify
 }
- */
+

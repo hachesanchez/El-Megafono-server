@@ -1,19 +1,19 @@
 const Job = require('./../models/Job.model')
 
 
+
+
 const getAllJobs = (req, res, next) => {
 
     Job
         .find()
         .populate({
             path: 'owner',
-            select: 'username'
+
         })
         .populate({
             path: 'applicants',
-            select: 'username'
         })
-        .select({ title: 1, imageUrl: 1, owner: 1, applicants: 1 })
         .sort({ title: 1 })
         .then(response => res.json(response))
         .catch(err => next(err))

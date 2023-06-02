@@ -29,7 +29,7 @@ const getOneJob = (req, res, next) => {
         .findById(id)
         .populate({
             path: 'owner',
-            select: 'username'
+
         })
         .populate({
             path: 'applicants',

@@ -13,11 +13,17 @@ TO DO:
 -  Desacoplar ontroladores
 - Controladores auth no funcionan
 - Cloudinary
+- CRUD Jobs
+- / Empleos 
 
 
+- Guardar oferta
+- Aplicar a oferta
+- Hacer FAVORITOS profesionañes
+- Buscador de profesionales
+- / Que sólo aparezcan empleos de tu categoría
 - Borrar experiencia, que desaparezca del perfil sin recarga: LOAD EXPERIENCE
 - Gestion de errores
-- CRUD Jobs
 - Muchos errores en dropdown de navbar
 - Navbar por roles
 - La edición de experiencia no está protegida
@@ -25,12 +31,6 @@ TO DO:
 - Al iniciar sesión redirige a la segunda
 - / Contacta
 - / Inicio
-- / Empleos 
-- Hacer FAVORITOS profesionañes
-- Guardar oferta
-- Aplicar a oferta
-- Buscador de profesionales
-- / Que sólo aparezcan empleos de tu categoría
 - Formularios en modales
 
 - Ordenar por fecha la experience list

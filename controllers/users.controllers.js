@@ -5,9 +5,9 @@ const getAllUsers = (req, res, next) => {
 
     User
         .find()
-        .select({ username: 1, avatar: 1, role: 1, location: 1 })
+        .select({ username: 1, avatar: 1, role: 1, location: 1, availability: 1, jobCategory: 1 })
         .sort({ username: 1 })
-        .then(response => setTimeout(() => res.json(response), 1000))
+        .then(response => res.json(response))
         .catch(err => next(err))
 
 }
@@ -29,7 +29,6 @@ const getOneUser = (req, res, next) => {
         })
         .populate({
             path: 'favoriteProfessionals',
-            select: 'username'
         })
         .then(response => res.json(response))
         .catch(err => next(err))

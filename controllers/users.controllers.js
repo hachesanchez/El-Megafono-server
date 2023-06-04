@@ -1,4 +1,5 @@
 const User = require('../models/User.model')
+const { response } = require('express')
 
 
 const getAllUsers = (req, res, next) => {
@@ -49,6 +50,21 @@ const editUser = (req, res, next) => {
 }
 
 
+const addSavedJob = (req, res, next) => { //TODO: ESTO NO FUNCIONA
+
+    const { id } = req.params
+    const { jobId } = req.body
+
+    User
+        .findByIdAndUpdate(id,
+            { $push: { savedJob: jobId } },
+            { new: true })
+        .then(response => res.json(response))
+        .catch(err => next(err))
+
+}
+
+
 const deleteUser = (req, res, next) => {
 
     const { id } = req.params
@@ -65,5 +81,6 @@ module.exports = {
     getAllUsers,
     getOneUser,
     editUser,
+    addSavedJob,
     deleteUser
 }

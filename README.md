@@ -20,6 +20,7 @@ Base URL `/api/users`
 | GET | `/getAllUsers` | Get all users list |
 | GET | `/getOneUser/:id` | Get matching ID user details|
 | GET | `/favourites/:id` | Get list of users made favourite by a user| 
+| POST | `/savedJob/:id` | Add job to saved jobs array|
 | POST | `/favourites/:id` | Add users to a list of favourites|
 | PUT | `/edit/:id` | Matching ID user edition |
 | DELETE | `/delete/:id` | Matching ID user deletion |

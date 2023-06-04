@@ -15,6 +15,8 @@ TO DO:
 - Cloudinary
 - CRUD Jobs
 - / Empleos 
+- / Contacta
+- / Inicio
 
 
 - Guardar oferta
@@ -29,8 +31,6 @@ TO DO:
 - La edición de experiencia no está protegida
 - Editar perfil: renderizar un formulario u otro según el ROL
 - Al iniciar sesión redirige a la segunda
-- / Contacta
-- / Inicio
 - Formularios en modales
 
 - Ordenar por fecha la experience list

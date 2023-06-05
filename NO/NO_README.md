@@ -17,14 +17,18 @@ TO DO:
 - / Empleos 
 - / Contacta
 - / Inicio
+- Ocultar botones si no eres dueño
+- Search location
 
-
+- Que en profesionales sólo aparezcan los de ROL: Profesional 
+- Que sólo aparezcan empleos de tu categoría
 - Guardar oferta
+- y securizar la ruta
 - Aplicar a oferta
 - Hacer FAVORITOS profesionañes
 - Buscador de profesionales
-- / Que sólo aparezcan empleos de tu categoría
 - Borrar experiencia, que desaparezca del perfil sin recarga: LOAD EXPERIENCE
+- Borrar empleo, que desaparezca de "empleos" sin recarga
 - Gestion de errores
 - Muchos errores en dropdown de navbar
 - Navbar por roles

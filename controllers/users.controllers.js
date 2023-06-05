@@ -37,6 +37,17 @@ const getOneUser = (req, res, next) => {
 }
 
 
+const getCandidateUsers = (req, res, next) => {
+
+    User
+        .find({ role: 'PROFESIONAL' })
+        .select({ username: 1, avatar: 1, role: 1, location: 1, availability: 1, jobCategory: 1 })
+        .sort({ username: 1 })
+        .then(users => res.json(users))
+        .catch(err => next(err));
+};
+
+
 const editUser = (req, res, next) => {
 
     const { email, username, role, avatar, description, location, jobCategory, yearsOfExperience, availability, travelAvailability, languages, skills, dailyRate, grossSalary, experience, savedJob, favoriteProfessionals } = req.body
@@ -53,11 +64,11 @@ const editUser = (req, res, next) => {
 const addSavedJob = (req, res, next) => { //TODO: ESTO NO FUNCIONA
 
     const { id } = req.params
-    const { jobId } = req.body
+    const { jobId } = req.params
 
     User
         .findByIdAndUpdate(id,
-            { $push: { savedJob: jobId } },
+            { $addToSet: { savedJob: jobId } },
             { new: true })
         .then(response => res.json(response))
         .catch(err => next(err))
@@ -80,6 +91,7 @@ const deleteUser = (req, res, next) => {
 module.exports = {
     getAllUsers,
     getOneUser,
+    getCandidateUsers,
     editUser,
     addSavedJob,
     deleteUser

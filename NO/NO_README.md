@@ -21,22 +21,31 @@ TO DO:
 - Search location
 - Que en profesionales sólo aparezcan los de ROL: Profesional 
 - Que sólo aparezcan empleos de tu categoría
-
-- Rol Organización no puede crear ni ver experiencias
 - Guardar oferta
-- y securizar la ruta
-- Aplicar a oferta
-- Hacer FAVORITOS profesionañes
-- Filtro de profesionales
+- Sacar username.
 - Borrar experiencia, que desaparezca del perfil sin recarga: LOAD EXPERIENCE
+- Editar perfil: renderizar un formulario u otro según el ROL
+- Al iniciar sesión redirige a la segunda
+- Que los empleos desaparezcan al borrar
+
+- Iconos de Candidate card
+- Details job: Arreglar fecha
+- Details job: Arreglar languages
+- Esconder marcador oferta para las organizaciones
+- Admin no puede ver empleos
+- colores de disponibilidad en card de candidates
+- Pintar empleos en perfil para ONGs
+- Filtro de profesionales
+- Rol Organización no puede crear ni ver experiencias
+- y securizar la ruta
+- Hacer FAVORITOS profesionañes
 - Borrar empleo, que desaparezca de "empleos" sin recarga
 - Gestion de errores
 - Muchos errores en dropdown de navbar
 - Navbar por roles
 - La edición de experiencia no está protegida
-- Editar perfil: renderizar un formulario u otro según el ROL
-- Al iniciar sesión redirige a la segunda
 - Formularios en modales
+- Aplicar a oferta
 
 - Ordenar por fecha la experience list
 - Arreglar formato fecha en el defaultvalue

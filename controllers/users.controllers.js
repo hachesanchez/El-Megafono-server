@@ -26,7 +26,6 @@ const getOneUser = (req, res, next) => {
         })
         .populate({
             path: 'savedJob',
-            select: 'title'
         })
         .populate({
             path: 'favoriteProfessionals',
@@ -36,6 +35,16 @@ const getOneUser = (req, res, next) => {
 
 }
 
+
+/* const getOwnedJobs = (req, res, next) => {
+
+    User
+        .find( )
+        .select({ username: 1, avatar: 1, role: 1, location: 1, availability: 1, jobCategory: 1 })
+        .sort({ username: 1 })
+        .then(users => res.json(users))
+        .catch(err => next(err));
+}; */
 
 const getCandidateUsers = (req, res, next) => {
 

@@ -1,15 +1,12 @@
 const Job = require('./../models/Job.model')
 
 
-
-
 const getAllJobs = (req, res, next) => {
 
     Job
         .find()
         .populate({
             path: 'owner',
-
         })
         .populate({
             path: 'applicants',

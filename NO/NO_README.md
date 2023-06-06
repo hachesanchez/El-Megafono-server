@@ -27,29 +27,32 @@ TO DO:
 - Editar perfil: renderizar un formulario u otro según el ROL
 - Al iniciar sesión redirige a la segunda
 - Que los empleos desaparezcan al borrar
+- Rol Organización no puede crear ni ver experiencias
+- Admin no puede ver empleos
+- Pintar empleos en perfil para ONGs
+- Borrar empleo, que desaparezca de "empleos" sin recarga
 
 - Iconos de Candidate card
+- Botón de crear ofertas para ONGs en perfil
+- Gestion de errores
+- Machacar token. cambios de usuario no se rerenderizan
 - Details job: Arreglar fecha
 - Details job: Arreglar languages
 - Esconder marcador oferta para las organizaciones
-- Admin no puede ver empleos
 - colores de disponibilidad en card de candidates
-- Pintar empleos en perfil para ONGs
 - Filtro de profesionales
-- Rol Organización no puede crear ni ver experiencias
 - y securizar la ruta
-- Hacer FAVORITOS profesionañes
-- Borrar empleo, que desaparezca de "empleos" sin recarga
-- Gestion de errores
 - Muchos errores en dropdown de navbar
 - Navbar por roles
 - La edición de experiencia no está protegida
 - Formularios en modales
-- Aplicar a oferta
-
 - Ordenar por fecha la experience list
 - Arreglar formato fecha en el defaultvalue
+
+- Hacer FAVORITOS profesionañes
+- Aplicar a oferta
 - Sacar más de un idioma al editar perfil
+
 
 
 

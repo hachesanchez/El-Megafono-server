@@ -19,14 +19,15 @@ TO DO:
 - / Inicio
 - Ocultar botones si no eres dueño
 - Search location
-
 - Que en profesionales sólo aparezcan los de ROL: Profesional 
 - Que sólo aparezcan empleos de tu categoría
+
+- Rol Organización no puede crear ni ver experiencias
 - Guardar oferta
 - y securizar la ruta
 - Aplicar a oferta
 - Hacer FAVORITOS profesionañes
-- Buscador de profesionales
+- Filtro de profesionales
 - Borrar experiencia, que desaparezca del perfil sin recarga: LOAD EXPERIENCE
 - Borrar empleo, que desaparezca de "empleos" sin recarga
 - Gestion de errores

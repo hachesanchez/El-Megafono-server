@@ -5,6 +5,7 @@ const {
     getOneUser,
     getCandidateUsers,
     addSavedJob,
+    deleteSavedJob,
     editUser,
     deleteUser
 } = require('./../controllers/users.controllers')
@@ -13,7 +14,8 @@ const {
 router.get("/getAllUsers", getAllUsers)
 router.get("/getOneUser/:id", getOneUser)
 router.get("/getCandidateUsers", getCandidateUsers)
-router.post("/savedJob/:id", addSavedJob)
+router.put("/addSavedJob/:jobId", addSavedJob)
+router.put("/deleteSavedJob/:jobId", deleteSavedJob)
 router.put("/edit/:id", editUser)
 router.delete("/delete/:id", deleteUser)
 

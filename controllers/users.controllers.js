@@ -57,23 +57,37 @@ const editUser = (req, res, next) => {
         .findByIdAndUpdate(id, { email, username, role, avatar, description, location, jobCategory, yearsOfExperience, availability, travelAvailability, languages, skills, dailyRate, grossSalary, experience, savedJob, favoriteProfessionals }, { new: true })
         .then(response => res.json(response))
         .catch(err => next(err))
-
 }
 
 
-const addSavedJob = (req, res, next) => { //TODO: ESTO NO FUNCIONA
+const addSavedJob = (req, res, next) => {
+    const { jobId } = req.params;
+    const { userId } = req.body
 
-    const { id } = req.params
-    const { jobId } = req.params
 
-    User
-        .findByIdAndUpdate(id,
-            { $addToSet: { savedJob: jobId } },
-            { new: true })
+    User.findByIdAndUpdate(
+        userId,
+        { $addToSet: { savedJob: jobId } },
+        { new: true }
+    )
         .then(response => res.json(response))
-        .catch(err => next(err))
+        .catch(err => next(err));
+};
 
-}
+
+
+const deleteSavedJob = (req, res, next) => {
+    const { jobId } = req.params;
+    const { userId } = req.body
+
+    User.findByIdAndUpdate(
+        userId,
+        { $pull: { savedJob: jobId } },
+        { new: true }
+    )
+        .then(response => res.json(response))
+        .catch(err => next(err));
+};
 
 
 const deleteUser = (req, res, next) => {
@@ -94,5 +108,6 @@ module.exports = {
     getCandidateUsers,
     editUser,
     addSavedJob,
+    deleteSavedJob,
     deleteUser
 }

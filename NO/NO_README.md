@@ -31,16 +31,18 @@ TO DO:
 - Admin no puede ver empleos
 - Pintar empleos en perfil para ONGs
 - Borrar empleo, que desaparezca de "empleos" sin recarga
-
-- Iconos de Candidate card
+- Esconder marcador oferta para las organizaciones
 - Botón de crear ofertas para ONGs en perfil
+- Iconos de Candidate card
+- colores de disponibilidad en card de candidates
+
+- Usuarios que han guardado la oferta
+- Filtro de profesionales
 - Gestion de errores
+- Darle formato a los formularios
 - Machacar token. cambios de usuario no se rerenderizan
 - Details job: Arreglar fecha
 - Details job: Arreglar languages
-- Esconder marcador oferta para las organizaciones
-- colores de disponibilidad en card de candidates
-- Filtro de profesionales
 - y securizar la ruta
 - Muchos errores en dropdown de navbar
 - Navbar por roles

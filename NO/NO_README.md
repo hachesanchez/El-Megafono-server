@@ -35,20 +35,24 @@ TO DO:
 - Botón de crear ofertas para ONGs en perfil
 - Iconos de Candidate card
 - colores de disponibilidad en card de candidates
-
 - Usuarios que han guardado la oferta
 - Filtro de profesionales
-- Gestion de errores
 - Darle formato a los formularios
-- Machacar token. cambios de usuario no se rerenderizan
 - Details job: Arreglar fecha
+- Endpoints. arreglar readme
+- Ordenar por fecha la experience list
+
+
+-volvwer a wellcome
+- Gestion de errores
+- Machacar token. cambios de usuario no se rerenderizan
 - Details job: Arreglar languages
-- y securizar la ruta
+- Emoticonos contacta
+- Securizar pages: crear experiencia, crear oferta, editar experiencia, editar oferta
 - Muchos errores en dropdown de navbar
 - Navbar por roles
 - La edición de experiencia no está protegida
 - Formularios en modales
-- Ordenar por fecha la experience list
 - Arreglar formato fecha en el defaultvalue
 
 - Hacer FAVORITOS profesionañes
@@ -140,20 +144,4 @@ Base URL: `/api/job-applications`
 
  # El-Megafono-server
 
-
-
-
-
-   <h5><Link className="" to={`/profesionales/${user?._id}`}>
-                        <Badge bg="secondary">Ver mi perfil público</Badge>{' '}
-                    </Link></h5>
-                    <h5> <Link className=" " to={`/edit/${user?._id}`}>
-                        <Badge bg="secondary">Completar mi perfil</Badge>{' '}
-                    </Link></h5>
-                    <Badge as={Link} to="" onClick={handleDeleteUser} bg="danger">Borrar mi perfil  </Badge>{' '}
-                    {/*  <Link className="" to={`/edit/${user?._id}`}>
-                        <Badge bg="danger">Borrar cuenta</Badge>
-                    </Link> */}
-                    <Button className="m-2" variant="danger" size="sm" onClick={handleDeleteUser}>
-                        Borrar mi perfil
-                    </Button>
+ 

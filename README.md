@@ -19,12 +19,13 @@ Base URL `/api/users`
 | ------------- | ------------- | ------------- |  
 | GET | `/getAllUsers` | Get all users list |
 | GET | `/getOneUser/:id` | Get matching ID user details|
+| GET | `/getOneUser/:id` | Get users with role "PROFESIONAL"|
 | GET | `/favourites/:id` | Get list of users made favourite by a user| 
-| POST | `/savedJob/:id` | Add job to saved jobs array|
-| POST | `/favourites/:id` | Add users to a list of favourites|
+| POST | `/addSavedJob/:jobId` | Add job to saved jobs array|
+| PUT | `/deleteSavedJob/:jobId` | Matching ID deletion from favourites | 
 | PUT | `/edit/:id` | Matching ID user edition |
 | DELETE | `/delete/:id` | Matching ID user deletion |
-| DELETE | `/favourites/:id` | Matching ID deletion from favourites |
+
 
 
 **Experience Routes**
@@ -46,13 +47,10 @@ Base URL `/api/jobs`
 | ------------- | ------------- | ------------- |  
 | GET | `/getAllJobs` | Get all jobs list |
 | GET | `/getOneJob/:id` | Get matching ID job details| 
-| GET | `/owner/:id` | Get list of jobs with the same owner|
-| GET | `/category/:id` | Get list of jobs with the same category|
-| GET | `/saved/:id` | Get list of jobs saved on a user's profile|
-| POST | `/saveJob` | Create new job offer |
+ | POST | `/saveJob` | Create new job offer |
 | POST | `/saved/:id` | Save a maching ID job offer to a user's profile|
 | PUT | `/edit/:id` | Matching ID job edition |
 | DELETE | `/delete/:id` | Matching ID job deletion |
-| DELETE | `/saved/:id` | Matching ID job deletion from saved|
+ 
 
  

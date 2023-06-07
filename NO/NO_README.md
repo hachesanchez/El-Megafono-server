@@ -1,4 +1,25 @@
+
+
 TO DO:
+
+- volvwer a wellcome
+- Gestion de errores
+- Machacar token. cambios de usuario no se rerenderizan
+- Candidate Search. que funcione sin darle a buscar
+- Details job: Arreglar languages
+- Emoticonos contacta
+- Securizar pages: crear experiencia, crear oferta, editar experiencia, editar oferta
+- Muchos errores en dropdown de navbar
+- La edición de experiencia no está protegida
+- Formularios en modales
+- Arreglar formato fecha en el defaultvalue
+
+- Hacer FAVORITOS profesionañes
+- Aplicar a oferta
+- Sacar más de un idioma al editar perfil
+
+
+DONE:
 
 - Proteger rutas
 - Saber quién es el owner de la sesión
@@ -10,7 +31,7 @@ TO DO:
 - TODO: SUPEDITAR LA SALIDA DE LA BARRA A LA EXISTENCIA DE USER
 - TODO: Encapsular UseEffects
 - Experiences se crean sin owner
--  Desacoplar ontroladores
+- Desacoplar ontroladores
 - Controladores auth no funcionan
 - Cloudinary
 - CRUD Jobs
@@ -40,24 +61,10 @@ TO DO:
 - Darle formato a los formularios
 - Details job: Arreglar fecha
 - Endpoints. arreglar readme
-- Ordenar por fecha la experience list
-
-
--volvwer a wellcome
-- Gestion de errores
-- Machacar token. cambios de usuario no se rerenderizan
-- Details job: Arreglar languages
-- Emoticonos contacta
-- Securizar pages: crear experiencia, crear oferta, editar experiencia, editar oferta
-- Muchos errores en dropdown de navbar
 - Navbar por roles
-- La edición de experiencia no está protegida
-- Formularios en modales
-- Arreglar formato fecha en el defaultvalue
 
-- Hacer FAVORITOS profesionañes
-- Aplicar a oferta
-- Sacar más de un idioma al editar perfil
+
+
 
 
 

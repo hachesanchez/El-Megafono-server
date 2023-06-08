@@ -1,20 +1,16 @@
 
-
 TO DO:
 
--Edición de oferta: estás editando el puesto?
-- Gestion de errores
+- Edición de oferta: estás editando el puesto?
 - Sacar containers de containers
 - Machacar token. cambios de usuario no se rerenderizan
 - Candidate Search. que funcione sin darle a buscar
 - Details job: Arreglar languages
 - Emoticonos contacta
-- Securizar pages: crear experiencia, crear oferta, editar experiencia, editar oferta
 - Muchos errores en dropdown de navbar
 - La edición de experiencia no está protegida
 - Formularios en modales
 - Arreglar formato fecha en el defaultvalue
-
 
 - Hacer FAVORITOS profesionañes
 - Aplicar a oferta
@@ -23,6 +19,8 @@ TO DO:
 
 DONE:
 
+- Securizar pages: crear experiencia, crear oferta, editar experiencia, editar oferta
+- Gestion de errores
 - Proteger rutas
 - Saber quién es el owner de la sesión
 - Prerrellenar campos en formulario de editar perfil

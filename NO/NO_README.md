@@ -2,8 +2,9 @@
 
 TO DO:
 
-- volvwer a wellcome
+-Edición de oferta: estás editando el puesto?
 - Gestion de errores
+- Sacar containers de containers
 - Machacar token. cambios de usuario no se rerenderizan
 - Candidate Search. que funcione sin darle a buscar
 - Details job: Arreglar languages
@@ -13,6 +14,7 @@ TO DO:
 - La edición de experiencia no está protegida
 - Formularios en modales
 - Arreglar formato fecha en el defaultvalue
+
 
 - Hacer FAVORITOS profesionañes
 - Aplicar a oferta

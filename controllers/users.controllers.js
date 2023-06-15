@@ -115,7 +115,6 @@ const deleteUser = (req, res, next) => {
 
     User
         .findByIdAndDelete(id)
-        // TODO: REVISAR ENDPOINTS RESOLUBLES CON SENDSTATUS
         .then(() => res.sendStatus(204))
         .catch(err => next(err))
 

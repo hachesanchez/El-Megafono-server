@@ -81,10 +81,6 @@ const userSchema = new Schema(
     }],
     skills: {
       type: [String],
-      // validate: {
-      //   validator: value => value.length >= 3,
-      //   message: 'Incluye un mínimo de tres skills'
-      // }
     },
     dailyRate: {
       type: Number,

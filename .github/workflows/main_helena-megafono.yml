@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'helena-megafono'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3DB703F1057A436DB7446BB3E19D4CEC }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4F3767BF68CD4B7AA51C5693BED82757 }}
           package: .
